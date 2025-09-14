@@ -1,4 +1,4 @@
-##create shared object :
+## Create shared object :
 ```bash
 gcc file.o -shared libfile.so
 
@@ -7,7 +7,7 @@ gcc -->linker
 
 dynamic linking :
 
-##Link between them :
+## Link between them :
 ```bash
 gcc main.o -lfile -L$(pwd) -o main
 
@@ -24,7 +24,7 @@ ldd main
 
 ```
 
-###Loader will use :
+### Loader will look :
 This will make the library availabe at run-time:
 
 ###Environment varaible :
@@ -33,10 +33,10 @@ This will make the library availabe at run-time:
 export LD_LIBRARY_PATH=$(pwd)
 unset LD_LIBRARY_PATH
  
-###Cache (data base)
+### Cache (data base)
 /etc/ld.so.conf, ld.so.conf.d/*.conf , ld.so.cache 
 
-###Convention to prepare a shared library:
+### Convention to prepare a shared library:
 
 To create a shared library :
 
