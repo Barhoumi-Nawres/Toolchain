@@ -67,6 +67,28 @@ sudo nano /etc/ld.so.conf.d/file.conf
 ```
 
 and add the path inside it .
-and then run sudo ldconfig to update the cache.
+and then run
+``````bash
+sudo ldconfig
+
+```
+
+ to update the cache.
+
+To search for the shared library in the cache,  use the following command :
+
+
+``````bash
+ldconfig -p | grep libfile.so
+
+```
+
+#### Using RPATH:
+
+``````bash
+gcc main.o -lfile -L$(pwd) -Wl,-rpath=$(pwd) -o main
+
+```
+This method it not recommended for professional projects because it uses a  (RUNPATH=) local path
 
 ![linking graph](shared-library.drawio.png)
