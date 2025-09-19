@@ -76,14 +76,17 @@ to update the cache.
 To search for the shared library in the cache,  use the following command :
 
 
-``````bash
+```bash
 ldconfig -p | grep libfile.so
 
 ```
 
+
+
 #### Using RPATH:
 
-``````bash
+
+```bash
 gcc main.o -lfile -L$(pwd) -Wl,-rpath=$(pwd) -o main
 
 ```
